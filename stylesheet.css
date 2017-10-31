@@ -92,6 +92,7 @@ span {
 	max-width: 1000px;
 	margin: 0 auto;
 	font-size: 12px;
+	background: #fff;
 }
 
 
@@ -150,7 +151,14 @@ span {
 }
 
 input {
-	padding-left: 10px;
+	padding-left: 20px;
+}
+
+select {
+	padding-left: 20px;
+	-webkit-appearance: none;
+	background: url('images/arrow.png') no-repeat;
+	background-position: 90% center;
 }
 
 main {
@@ -166,7 +174,7 @@ main {
 .headline-title {
 	width: 100%;
 	text-transform: uppercase;
-	background: url('headline.png') no-repeat center;
+	background: url('images/headline.png') no-repeat center;
 	text-align: center;
 	color: #fff;
 	font-size: 32px;
@@ -182,44 +190,58 @@ main {
 
 .main__notify {
 	text-align: center;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .main__form {
-	width: 20%;
-	margin: 50px 40%;
+	max-width: 350px;
+	margin: 50px auto;
 }
 
 .form__input {
 	width: 100%;
 	margin-bottom: 10px;
-	height: 30px;
+	height: 45px;
 	box-sizing: border-box;
 }
 
-.drop-down__place {
-	width: 100%;
-	height: 30px;
+.form__fill {
+	position: relative;
 }
 
-.drop-down__birthday {
+.form__fill label {
+	position: absolute;
+	font-size: 14px;
+	margin-top: -42px;
+	margin-left: 20px;
+}
+
+.form__fill input:focus + label {
+	margin-top: -50px;
+}
+
+.form__fill input:focus {
+	padding-top: 15px;
+}
+
+.drop-down {
 	width: 100%;
-	height: 30px;
-	margin-right: 5px;
+	height: 45px;
+	color: #434343;
 }
 
 .form__line {
 	height: 1px;
 	width: 100%;
 	background-color: black;
-	margin-top: 20px;
+	margin: 20px 0;
 }
 
 .row {
 	margin: 0 -5px;
 }
 
-.row:after {
+.clearfix:after {
 	content: '';
 	visibility: hidden;
 	display: block;
@@ -236,4 +258,139 @@ main {
 	width: 33.33%;
 	float: left;
 	padding: 5px;
+}
+
+.column--3 {
+	width: 25%;
+	float: left;
+}
+
+.form__check-box {
+	margin-top: 20px;
+	position: relative;
+}
+
+.check-box__wrapper {
+	margin-bottom: 10px;
+}
+
+.check-box__wrapper input[type=checkbox] {
+	display: none;
+}
+
+.check-box__wrapper label {
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 10px;
+    display: block;
+    margin-left: 30px;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.check-box__wrapper label:before {
+	width: 30px;
+	height: 30px;
+	background: url('images/untick.png');
+	position: absolute;
+	top: 0;
+	left: -30px;
+	content: '';
+}
+
+.column--12 {
+	padding: 0 5px;
+}
+
+.check-box__wrapper input:checked + label:before {
+	width: 30px;
+	height: 30px;
+	background: url('images/tick.png');
+	position: absolute;
+	top: 0;
+	left: -30px;
+	content: '';
+}
+
+label a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.submit__wrapper {
+	position: relative;
+	text-align: center;
+	max-width: 200px;
+	height: 40px;
+	margin: 50px auto;
+}
+
+.submit__wrapper input {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+	border: none;
+	outline: none;
+	background: transparent;
+	position: relative;
+	z-index: 2;
+	top: 10px;
+	cursor: pointer;
+}
+
+.submit__wrapper:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(-90deg, #0fb837, #00ad54);
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 5px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.submit__wrapper:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: #f4ca0e;
+	display: block;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	box-shadow: -5px 5px 10px #0eb73a;
+	cursor: pointer;
+}
+
+.form__birthday .row {
+	margin-top: 10px;
+}
+
+.image__strawberry {
+	position: absolute;
+	top: -20px;
+	right: 250px;
+	width: 90px;
+	height: 90px;
+}
+
+.image__oreo {
+	position: absolute;
+	width: 91px;
+	height: 102px;
+	left: 100px;
+	bottom: 450px;
+}
+
+.image__avocado {
+	position: absolute;
+	width: 147px;
+	height: 143px;
+	right: 200px;
+	bottom: 0px;
+	z-index: -1;
+	display: block;
 }

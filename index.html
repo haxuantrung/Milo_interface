@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Milo</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
 	<header class="nav-bar">
-		<img src="logo.png" alt="Logo" class="logo">
+		<img src="images/logo.png" alt="Logo" class="logo">
 		<div class="nav-bar__group">
-			<a href="#" class="group__text active">trang chủ</a>
-			<a href="#" class="group__text">danh sách lớp học</a>
-			<a href="#" class="group__text">thông tin hlv</a>
-			<a href="#" class="group__text">thể lệ &amp; điều kiện</a>
+			<div class="row clearfix">
+				<a href="#" class="group__text active">trang chủ</a>
+				<a href="#" class="group__text">danh sách lớp học</a>
+				<a href="#" class="group__text">thông tin hlv</a>
+				<a href="#" class="group__text">thể lệ &amp; điều kiện</a>
+			</div>
 		</div>
 	</header>
 
 	<main>
 		<section class="main__headline">
 			<h3 class="headline-title">delivery information</h3>
-			<img src="bottle.png" alt="Bottle" class="headline__bottle">
+			<img src="images/bottle.png" alt="Bottle" class="headline__bottle">
 		</section>
 
 		<div class="main__notify">Please let us know how to tell you if you won the prizes</div>
 
 		<form class="main__form">
-			<input type="text" name="full-name" class="form__input" placeholder="Full name">
-			<input type="text" name="email" class="form__input" placeholder="Email">
-			<input type="text" name="phone" class="form__input" placeholder="Phone number">
-			<input type="text" name="address" class="form__input" placeholder="Address">
+			<div class="form__fill">
+				<div class="row">
+					<div class="column--12">
+						<input type="text" name="full-name" class="form__input" id="fill__full-name">
+						<label for="fill__full-name">Full name</label>
+					</div>
+				</div>
 
-			<div class="row">
+				<div class="row">
+					<div class="column--12">
+						<input type="text" name="email" class="form__input" id="fill__email">
+						<label for="fill__email">Email</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column--12">
+						<input type="text" name="phone" class="form__input" id="fill__phone">
+						<label for="fill__phone">Phone number</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column--12">
+						<input type="text" name="address" class="form__input" id="fill__address">	
+						<label for="fill__address">Address</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row clearfix">
 				<div class="column--6">
-					<select class="drop-down__place">
-						<option>City</option>
+					<select class="drop-down">
+						<option disabled="" selected="">City</option>
 						<option value="Ho Chi Minh">Ho Chi Minh</option>
 						<option value="Ha Noi">Ha Noi</option>
 					</select>
 				</div>
 				
 				<div class="column--6">
-					<select class="drop-down__place">
-						<option>District</option>
+					<select class="drop-down">
+						<option disabled="" selected="">District</option>
 						<option value="Tan Binh">Tan Binh</option>
 						<option value="Quan 1">Quan 1</option>
 						<option value="Binh Thanh">Binh Thanh</option>
@@ -54,11 +81,11 @@
 			<div class="form__line"></div>
 
 			<section class="form__birthday">
-				<p>My kid DoB</p>
-				<div class="row">
+				<label for="day">My kid DoB</label>
+				<div class="row clearfix">
 					<div class="column--4">
-						<select class="drop-down__birthday">
-							<option>DD</option>
+						<select class="drop-down" id="day">
+							<option disabled="" selected="">DD</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -94,8 +121,8 @@
 					</div>
 
 					<div class="column--4">
-						<select class="drop-down__birthday">
-							<option>MM</option>
+						<select class="drop-down">
+							<option disabled="" selected="">MM</option>
 							<option value="January">January</option>
 							<option value="Febuary">Febuary</option>
 							<option value="March">March</option>
@@ -112,8 +139,8 @@
 					</div>
 
 					<div class="column--4">
-						<select class="drop-down__birthday">
-							<option>YYYY</option>
+						<select class="drop-down">
+							<option disabled="" selected="">YYYY</option>
 							<option value="1993">1993</option>
 							<option value="1992">1992</option>
 							<option value="1991">1991</option>
@@ -131,17 +158,40 @@
 			<div class="form__line"></div>
 
 			<section class="form__check-box">
-				
+				<div class="row check-box__wrapper">
+					<div class="column--12">
+						<input type="checkbox" name="check" id="check-tnc">
+						<label for="check-tnc">
+							I agree with&nbsp;<a href="#">Terms &amp; Conditions</a>
+						</label>
+						
+					</div>
+				</div>
+				<div class="row check-box__wrapper">
+					<div class="column--12">
+						<input type="checkbox" name="check" id="check-verify">
+						<label for="check-verify">
+							I'm here to ensuring that I'm 18 YO and above
+						</label>
+						
+					</div>
+				</div>
+			</section>
+
+			<section class="form__submit">
+				<div class="submit__wrapper">
+					<input type="submit" name="submit" id="check-submit">
+				</div>
 			</section>
 		</form>
 	</main>
 
-	<footer class="footer">
+	<footer class="footer clearfix">
 		<div class="footer__left">
 			<ul>
-				<li><a href="#"><img src="fb-icon.png" alt="Facebook" class="icon"></a></li>
-				<li><a href="#"><img src="youtube-icon.png" class="icon"></a></li>
-				<li><a href="#"><span class="contact--black contact--border">Liên hệ</span><span><img src="contact.png" alt="Contact" class="icon-contact"></span></a></li>
+				<li><a href="#"><img src="images/fb-icon.png" alt="Facebook" class="icon"></a></li>
+				<li><a href="#"><img src="images/youtube-icon.png" class="icon"></a></li>
+				<li><a href="#"><span class="contact--black contact--border">Liên hệ</span><span><img src="images/contact.png" alt="Contact" class="icon-contact"></span></a></li>
 			</ul>
 		</div>
 
@@ -161,8 +211,20 @@
 				<li class="footer__comp-name">&copy; 2014 Nestle Việt Nam</li>
 			</ul>
 			
-			<img src="nestle-logo.jpeg" alt="Nestle" class="icon__nestle">
+			<img src="images/nestle-logo.jpeg" alt="Nestle" class="icon__nestle">
 		</div>
 	</footer>
+
+	<div class="image__strawberry">
+		<img src="images/strawberry.png" alt="Strawberry">
+	</div>
+
+	<div class="image__oreo">
+		<img src="images/oreo.png" alt="Oreo">
+	</div>
+
+	<div class="image__avocado">
+		<img src="images/avocado.png" alt="Avocado">
+	</div>
 </body>
 </html>
